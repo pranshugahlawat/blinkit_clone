@@ -1,9 +1,11 @@
-import 'package:Blinkit_Clone/data/items.dart';
-import 'package:Blinkit_Clone/repository/screens/navbar/topbar.dart';
-import 'package:Blinkit_Clone/repository/widgets/uihelper.dart';
+import 'package:blinkit_clone/data/items.dart';
+import 'package:blinkit_clone/repository/screens/navbar/topbar.dart';
+import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget{
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +20,7 @@ class HomeScreen extends StatelessWidget{
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  UIHelper.CustomText(
+                  UIHelper.customText(
                     text: "Mega Sale",
                     color: Colors.black,
                     fontweight: FontWeight.bold,
@@ -29,31 +31,54 @@ class HomeScreen extends StatelessWidget{
                   SizedBox(
                     height: 180,
                     width: double.infinity,
-                    child: UIHelper.SaleWidget(itemList: megaSale),
+                    child: UIHelper.saleWidget(itemList: megaSale),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 10,),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  SizedBox(width:7,),
-                  UIHelper.itemAddWidget(img: "candle_hs.png", title: 'Golden Glass \nWooden Lid Candle (Oudh)', price: "₹79"),
-                  UIHelper.itemAddWidget(img: "bikano_hs.png", title: 'Royal Gulab Jamun \nBy Bikano', price: "₹79"),
-                  UIHelper.itemAddWidget(img: "bhujia_hs.png", title: 'Bikaji Bhujia', price: "₹79"),
-                ],
+            SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    SizedBox(width: 5,),
+                    UIHelper.itemAddWidget(
+                      img: "candle_hs.png",
+                      title: 'Golden Glass Wooden \nLid Candle (Oudh)',
+                      price: "₹79",
+                    ),
+                    UIHelper.itemAddWidget(
+                      img: "bikano_hs.png",
+                      title: 'Royal Gulab Jamun \nBy Bikano',
+                      price: "₹79",
+                    ),
+                    UIHelper.itemAddWidget(
+                      img: "bhujia_hs.png",
+                      title: 'Bikaji Bhujia',
+                      price: "₹79",
+                    ),
+                  ],
+                ),
               ),
             ),
-            SizedBox(height: 10,),
-            UIHelper.itemWidgetWithHeading(heading: "Grocery & Kitchen", itemList: groceryKitchen),
-            UIHelper.itemWidgetWithHeading(heading: "Snacks & Drinks", itemList: snacksDrinks),
-            UIHelper.itemWidgetWithHeading(heading: "Household Essentials", itemList: householdEssentials),
+            SizedBox(height: 10),
+            UIHelper.itemWidgetWithHeading(
+              heading: "Grocery & Kitchen",
+              itemList: groceryKitchen,
+            ),
+            UIHelper.itemWidgetWithHeading(
+              heading: "Snacks & Drinks",
+              itemList: snacksDrinks,
+            ),
+            UIHelper.itemWidgetWithHeading(
+              heading: "Household Essentials",
+              itemList: householdEssentials,
+            ),
           ],
-
         ),
-      )
+      ),
     );
   }
 }

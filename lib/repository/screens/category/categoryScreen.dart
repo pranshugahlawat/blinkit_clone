@@ -1,9 +1,11 @@
-import 'package:Blinkit_Clone/repository/screens/navbar/topbar.dart';
-import 'package:Blinkit_Clone/repository/widgets/uihelper.dart';
+import 'package:blinkit_clone/repository/screens/navbar/topbar.dart';
+import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
-import 'package:Blinkit_Clone/data/items.dart';
+import 'package:blinkit_clone/data/items.dart';
 
 class CategoryScreen extends StatelessWidget {
+  const CategoryScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

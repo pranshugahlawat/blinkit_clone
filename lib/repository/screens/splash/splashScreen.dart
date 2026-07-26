@@ -1,10 +1,12 @@
 import 'dart:async';
-import 'package:Blinkit_Clone/domain/constants/appcolors.dart';
-import 'package:Blinkit_Clone/repository/screens/login/loginScreen.dart';
-import 'package:Blinkit_Clone/repository/widgets/uihelper.dart';
+import 'package:blinkit_clone/domain/constants/appcolors.dart';
+import 'package:blinkit_clone/repository/screens/login/loginScreen.dart';
+import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -28,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [UIHelper.CustomImage(img: "splash_screen.png")],
+          children: [UIHelper.customImage(img: "splash_screen.png")],
         ),
       ),
     );

@@ -1,11 +1,13 @@
-import 'package:Blinkit_Clone/repository/screens/cart/cartScreen.dart';
-import 'package:Blinkit_Clone/repository/screens/category/categoryScreen.dart';
-import 'package:Blinkit_Clone/repository/screens/home/homeScreen.dart';
-import 'package:Blinkit_Clone/repository/screens/print/printScreen.dart';
-import 'package:Blinkit_Clone/repository/widgets/uihelper.dart';
+import 'package:blinkit_clone/repository/screens/cart/cartScreen.dart';
+import 'package:blinkit_clone/repository/screens/category/categoryScreen.dart';
+import 'package:blinkit_clone/repository/screens/home/homeScreen.dart';
+import 'package:blinkit_clone/repository/screens/print/printScreen.dart';
+import 'package:blinkit_clone/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class Navbar extends StatefulWidget {
+  const Navbar({super.key});
+
   @override
   State<Navbar> createState() => _NavbarState();
 }
@@ -25,19 +27,19 @@ class _NavbarState extends State<Navbar> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: UIHelper.CustomImage(img: "home_icon.png"),
+            icon: UIHelper.customImage(img: "home_icon.png"),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: UIHelper.CustomImage(img: "bag_icon.png"),
+            icon: UIHelper.customImage(img: "bag_icon.png"),
             label: "Cart",
           ),
           BottomNavigationBarItem(
-            icon: UIHelper.CustomImage(img: "category_icon.png"),
+            icon: UIHelper.customImage(img: "category_icon.png"),
             label: "Categories",
           ),
           BottomNavigationBarItem(
-            icon: UIHelper.CustomImage(img: "printer_icon.png"),
+            icon: UIHelper.customImage(img: "printer_icon.png"),
             label: "Print",
           ),
         ],
